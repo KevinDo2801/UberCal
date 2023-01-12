@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body,
+html {
+    height: 100%;
+    font-family: Lato;
+}
+
+/*---------------------------------------------*/
+a {
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+/* map-left */
+.row__left{
+    padding: 0;
+    position: relative;
+}
+
+.overlay__left{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.florida__map{
+    width: 100%;
+    height: 800px;
+}
+
+.contact-more{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    color: #fff;
+    z-index: 100;
+    border-radius: 25px;
+    background-color: #39b54a;
+    padding: 10px 35px;
+}
+
+/* information right */
+.row__right{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+/* Title */
+.title h1{
+    text-align: center;
+    font-size: 39px;
+    color: #333333;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed;
+    margin-bottom: 9px;
+}
+
+.title__img{
+    display: flex;
+    justify-content: space-around;
+}
+/* choose type uber */
+ul li{
+    display: inline-block;
+    position: relative;
+    height: 100px;
+}
+
+.type__uber .type input{
+    position: absolute;
+    visibility: hidden;
+}
+
+.type__uber .type label{
+    display: inline-block;
+    padding: 25px 10px 25px 65px;
+    margin: 10px auto;
+    height: 30px;
+    cursor: pointer;
+}
+
+.type__uber .type p{
+    font-weight: 300; 
+    font-size: 1.35em;
+    transition: all .5s;
+}
+
+.type__uber .type .check{
+    position: absolute;
+    border: 5px solid;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+    transition: all .5s;
+}
+
+.type__uber .type .check::before{
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: all .5s;
+}
+
+.type__uber .type:hover p, .type__uber .type:hover .check{
+    color: #7e4240;
+}
+
+.type__uber input:checked ~ .check, .type__uber input:checked ~ p, .type__uber .type:hover input:checked ~ p{
+    border-color: #d5ae3a;
+    color: #d5ae3a;
+}
+
+.type__uber input:checked ~ .check::before{
+    background-color: #d5ae3a;
+}
+/* km input */
+.km__uber{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #dbdbdb;
+    margin-bottom: 45px;
+}
+
+.km__uber .km{
+    width: 100%;
+    font-size: 22px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 0 2px;
+    border: none;
+    height: 50px;
+}
+
+.km__uber .km:focus{
+    outline: none;
+}
+
+.km__uber .focus-inputKM{
+    position: absolute;
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    bottom: 0;
+    left: 0;
+}
+
+.km__uber .focus-inputKM::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: #df254e;
+    background: linear-gradient(45deg, #884747, #e0c04d);
+}
+
+.km__uber .km:focus ~ .focus-inputKM::before{
+    width: 100%;
+}
+/* waiting time input */
+.timeout__uber{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #dbdbdb;
+    margin-bottom: 45px;
+}
+
+.timeout__uber .tm{
+    width: 100%;
+    font-size: 22px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 0 2px;
+    border: none;
+    height: 50px;
+}
+
+.timeout__uber .tm:focus{
+    outline: none;
+}
+
+.timeout__uber .focus-inputTM{
+    position: absolute;
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    bottom: 0;
+    left: 0;
+}
+
+.timeout__uber .focus-inputTM::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: #df254e;
+    background: linear-gradient(45deg, #884747, #e0c04d);
+}
+
+.timeout__uber .tm:focus ~ .focus-inputTM::before{
+    width: 100%;
+}
+/* btn */
+.btn__uber{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.btnUBER__move{
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.uber__overlay{
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(-135deg, #884747, #e0c04d, #884747, #e0c04d);
+    top: 0;
+    left: -100%;
+    transition: all .4s;
+}
+
+.btn__uber button{
+    padding: 0 20px;
+    min-width: 244px;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.btnUBER__move:hover .uber__overlay{
+    transform: translateX(240px);
+}
+/* pay */
+.pay__uber{
+    padding: 9px;
+    background: #e7cc5c;
+    border-radius: 10px;
+    display: none;
+}
+
